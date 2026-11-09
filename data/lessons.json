@@ -2,15 +2,20 @@
   "day_01": {
     "week": 1,
     "title": "To Be in Technical Environments",
-    "prompt": "Completa la oración usando la forma correcta del verbo To Be: 'The database _____ down.'",
-    "expected_answers": ["is", "'s"],
-    "explanation": "Usamos 'is' porque 'database' es un sustantivo singular en tercera persona (equivale a 'It')."
-  },
-  "day_02": {
-    "week": 1,
-    "title": "Countable vs Uncountable Nouns",
-    "prompt": "Traduce 'muchas tablas' usando un cuantificador correcto para bases de datos relacionales.",
-    "expected_answers": ["many tables"],
-    "explanation": "Usamos 'many' con sustantivos contables en plural como 'tables'."
+    "daily_vocabulary": [
+      { "word": "Database", "translation": "Base de datos", "example": "The production database is slow." },
+      { "word": "Server", "translation": "Servidor", "example": "The web server is ready for traffic." },
+      { "word": "Down", "translation": "Caído / Fuera de servicio", "example": "The API gateway is down." },
+      { "word": "Available", "translation": "Disponible", "example": "The new microservice is available." },
+      { "word": "Issue", "translation": "Problema / Incidencia", "example": "There is an issue with the auth system." },
+      { "word": "Fix", "translation": "Solución / Parche", "example": "The hotfix is deployed and active." },
+      { "word": "Delay", "translation": "Retraso / Demora", "example": "There is a delay in data processing." }
+    ],
+    "prompt": "Escribe la oración completa rellenando el espacio en blanco para reportar una caída ('The database _____ down'):",
+    "expected_answers": [
+      "the database is down",
+      "the database's down"
+    ],
+    "explanation": "Usamos 'is' porque 'database' es un sustantivo singular en tercera persona (equivale a 'It' o 'El sistema')."
   }
 }

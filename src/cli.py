@@ -26,16 +26,28 @@ def run_lesson(day_number):
     print(f"\n==========================================")
     print(f" 🚀 Day {day_number}: {lesson['title']}")
     print(f"==========================================")
+    
+    # Mostrar las 7 palabras del día
+    if "daily_vocabulary" in lesson:
+        print("\n📚 Vocabulario del día (7 palabras):")
+        for idx, item in enumerate(lesson["daily_vocabulary"], 1):
+            print(f"  {idx}. {item['word']} ({item['translation']}) ➔ Ex: \"{item['example']}\"")
+            
+    # Mostrar palabras de días anteriores a reciclar
+    if "recycled_vocabulary" in lesson:
+        print(f"\n🔄 Palabras a recordar hoy: {', '.join(lesson['recycled_vocabulary'])}")
+        
+    print("\n------------------------------------------")
     print(f"📝 Reto: {lesson['prompt']}\n")
     
-    # Capturar respuesta del usuario en la terminal
-    user_answer = input("Tu respuesta > ").strip().lower()
+    # Capturar respuesta completa del usuario
+    user_answer = " ".join(input("Tu respuesta > ").strip().lower().split())
     
-    # Validar respuesta contra las opciones esperadas
-    valid_answers = [ans.lower() for ans in lesson["expected_answers"]]
+    # Validar respuesta
+    valid_answers = [" ".join(ans.lower().split()) for ans in lesson["expected_answers"]]
     
     if user_answer in valid_answers:
-        print("\n✅ ¡Correcto! Buen trabajo.")
+        print("\n✅ ¡Correcto! Excelente redacción.")
     else:
         print("\n❌ Incorrecto.")
         print(f"💡 Explicación: {lesson['explanation']}")
