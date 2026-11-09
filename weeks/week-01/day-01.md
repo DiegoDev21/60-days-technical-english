@@ -1,6 +1,6 @@
 ﻿# 📘 Day 01: To Be in Technical Environments
 
-![Day 01 Banner](../../../assets/banner-day-01.png)
+![Day 01 Banner](../../../images/banner-day-01.png)
 [<< Inicio / README](../../README.md) | [Day 02 >>](day-02.md)
 
 ---
